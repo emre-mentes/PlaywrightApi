@@ -42,7 +42,7 @@ test("request - response - explore", async ({ request }) => {
   }
   */
   //===========response headers tek tek erisim================================
-  
+
   //bir objectin propertisine ulasmak icin birinci yol olarak nokta kullanabiliriz
   console.log("header server ==>", response.headers().server);
   console.log("header date ==>", response.headers().date);
@@ -50,4 +50,8 @@ test("request - response - explore", async ({ request }) => {
   //bir objectin propertisine ulasmak icin ikinci yol olarak köseli parantez ile ulasabiliriz
   console.log("header content-type ==>", response.headers()["content-type"]);
 
+  //===========response body den tek tek erisim================================
+  console.log(responseBody.id); //5
+  console.log(responseBody.name); //doggie
+  console.log(responseBody.status); //string
 });
